@@ -56,15 +56,20 @@ elif entrada == 8:
 elif entrada == 9:
     #9 Faça um Programa que peça a temperatura em graus Farenheit, transforme e mostre a temperatura em graus Celsius.
     farenheit = float(input("\ntemperatura em farenheit: "))
-    Celsius = (5 * (farenheit - 32) / 9)
+    Celsius = (farenheit - 32) / 1.8
     print("\ntemperatura em celsius: {0}".format(Celsius))
 
 elif entrada == 10:
-    #9 Faça um Programa que peça a temperatura em graus Farenheit, transforme e mostre a temperatura em graus Celsius.
+    #10 Faça um Programa que peça a temperatura em graus Celsius, transforme e mostre em graus Farenheit.
     Celsius = float(input("\ntemperatura em celsius: "))
-    farenheit = (5 / Celsius * 9) + 32
-    print("\ntemperatura em farenheit: {0}".format(Celsius))
- 
+    farenheit = (Celsius * 1.8) + 32
+    print("\ntemperatura em farenheit: {0}".format(farenheit))
+elif entrada == 11:
+    print()
+    #11 Faça um Programa que peça 2 números inteiros e um número real. Calcule e mostre:
+    # A) o produto do dobro do primeiro com metade do segundo. 
+    # B) a soma do triplo do primeiro com o terceiro.
+    # C) o terceiro elevado ao cubo.
 else:
     print("error")
 
