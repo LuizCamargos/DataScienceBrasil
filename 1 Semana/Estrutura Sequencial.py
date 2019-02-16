@@ -25,7 +25,7 @@ elif entrada == 4:
     notaSoma4 =0 
     for i in range(1, 5):
         nota4.append(float(input("\n digite a nota {0}: ".format(i))))
-        notaSoma4 += nota[(i-1)]
+        notaSoma4 += nota4[(i-1)]
     notaSoma4 /= 4
     print("\n nota final: {0}".format(notaSoma4))
         
@@ -117,6 +117,25 @@ elif entrada == 15:
     print("\n- INSS (8%) : R$"+str(INSS15))
     print("\n- Sindicato ( 5%) : R$"+str(sindicato15))
     print("\n= Salário Liquido : R$"+str(SalLiquido))
+
+elif entrada == 16:
+    #16 Faça um programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada.
+    # Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00. 
+    # Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total.
+    areaQuadrada16 = float(input("\ndigite a area quadrada: "))
+    tinta16 = areaQuadrada16 / 3
+    latasTinta16 = round(tinta16, 0) 
+    custo16 = latasTinta16 * 80
+    print("\nLatas necessarias: {0}, Custo: R${1}".format(latasTinta16, custo16))
+elif entrada == 17:
+    
+elif entrada == 18:
+    #Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de um link de Internet (em Mbps),
+    # calcule e informe o tempo aproximado de download do arquivo usando este link (em minutos).
+    tamanho17 = float(input("\ndigite o tamanho do arquivo em MB: "))
+    velocidade17 = float(input("\ndigite a velocidade da coneccao em Mbps: "))
+    tempo17 = (tamanho17 / velocidade17)
+    print("ETA: "+str(tempo17)+" min")
 else:
     print("error")
 
