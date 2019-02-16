@@ -21,13 +21,13 @@ elif entrada == 3:
 
 elif entrada == 4:
     #4 Faça um Programa que peça as 4 notas bimestrais e mostre a média.
-    nota = []
-    notaSoma =0 
+    nota4 = []
+    notaSoma4 =0 
     for i in range(1, 5):
-        nota.append(float(input("\n digite a nota {0}: ".format(i))))
-        notaSoma += nota[(i-1)]
-    notaSoma /= 4
-    print("\n nota final: {0}".format(notaSoma))
+        nota4.append(float(input("\n digite a nota {0}: ".format(i))))
+        notaSoma4 += nota[(i-1)]
+    notaSoma4 /= 4
+    print("\n nota final: {0}".format(notaSoma4))
         
 elif entrada == 5:
     #5 Faça um Programa que converta metros para centímetros.
@@ -55,14 +55,14 @@ elif entrada == 8:
         
 elif entrada == 9:
     #9 Faça um Programa que peça a temperatura em graus Farenheit, transforme e mostre a temperatura em graus Celsius.
-    farenheit = float(input("\ntemperatura em farenheit: "))
-    Celsius = (farenheit - 32) / 1.8
-    print("\ntemperatura em celsius: {0}".format(Celsius))
+    farenheit9 = float(input("\ntemperatura em farenheit: "))
+    Celsius9 = (farenheit9 - 32) / 1.8
+    print("\ntemperatura em celsius: {0}".format(Celsius9))
 
 elif entrada == 10:
     #10 Faça um Programa que peça a temperatura em graus Celsius, transforme e mostre em graus Farenheit.
-    Celsius = float(input("\ntemperatura em celsius: "))
-    farenheit = (Celsius * 1.8) + 32
+    Celsius10 = float(input("\ntemperatura em celsius: "))
+    farenheit = (Celsius10 * 1.8) + 32
     print("\ntemperatura em farenheit: {0}".format(farenheit))
 elif entrada == 11:
     #11 Faça um Programa que peça 2 números inteiros e um número real. Calcule e mostre:
@@ -72,11 +72,52 @@ elif entrada == 11:
     num11A = int(input("\ndigite um numero int: "))
     num11B = int(input("\ndigite outro numero int: "))
     num11C = float(input("\ndigite um numero float: "))
-    
     print(num11A * 2 + num11B / 2)
     print(num11A * 3 + num11C)
     print(num11C ** 3)
+
+elif entrada == 12:
+    #Tendo como dados de entrada a altura de uma pessoa, construa um algoritmo que calcule seu peso ideal, usando a seguinte fórmula: (72.7*altura) - 58
+    altura12 = float(input("\ndigite sua altura em metros: "))
+    pesoIdeal12 = (72.7*altura12) - 58
+    print("\nseu peso ideal e: {0}".format(pesoIdeal12))
+
+elif entrada == 13:
+    #Tendo como dado de entrada a altura (h) de uma pessoa, construa um algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
+    # A)Para homens: (72.7*h) - 58
+    # B)Para mulheres: (62.1*h) - 44.7
+    altura13 = float(input("\ndigite sua altura em metros: "))
+    sexo13 =  int(input("\ndigite 1 para homem e 0 para mulher: "))
+    if sexo13 == 1:
+        pesoIdeal13 = (72.7*altura13) - 58
+    else:
+        pesoIdeal13 = (62.1*altura13) - 44.7
+
+    print("\nseu peso ideal e: {0}".format(pesoIdeal13))
+elif entrada == 14:
+    #faça um programa que leia a variável peso (peso de peixes) e calcule o excesso, mostre o excesso(se +50kg) e o valor da multa
+    peso14 = float(input("\ndigite o peso de pexes: "))
+    excesso14 = peso14 - 50
+    multa14 = 0
+    if excesso14 > 0:
+        multa14 = excesso14 * 4.0
+    print("multa: {0}, excesso: {1}".format(multa14,excesso14))
+elif entrada == 15:
+    #Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês, sabendo-se que são descontados 11% para o Imposto de Renda, 8% para o INSS e 5% para o sindicato, faça um programa que nos dê:
+    salario15 = float(input("\nsalario por hora: "))
+    horas15 = float(input("\nhoras trabalhadas: "))
+    SalBruto15 = salario15 * horas15
+    INSS15 = SalBruto15 * 0.08
+    IR15 = SalBruto15 * 0.11
+    sindicato15 = SalBruto15 * 0.05
+
+    SalLiquido = SalBruto15 - ( sindicato15 + INSS15 + IR15)
+    print("\n+ Salário Bruto : R$"+str(SalBruto15))
+    print("\n- IR (11%) : R$"+str(IR15))
+    print("\n- INSS (8%) : R$"+str(INSS15))
+    print("\n- Sindicato ( 5%) : R$"+str(sindicato15))
+    print("\n= Salário Liquido : R$"+str(SalLiquido))
 else:
     print("error")
 
-time.sleep(3)
+time.sleep(1)
