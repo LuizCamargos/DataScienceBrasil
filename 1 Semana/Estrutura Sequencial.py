@@ -65,11 +65,17 @@ elif entrada == 10:
     farenheit = (Celsius * 1.8) + 32
     print("\ntemperatura em farenheit: {0}".format(farenheit))
 elif entrada == 11:
-    print()
     #11 Faça um Programa que peça 2 números inteiros e um número real. Calcule e mostre:
     # A) o produto do dobro do primeiro com metade do segundo. 
     # B) a soma do triplo do primeiro com o terceiro.
     # C) o terceiro elevado ao cubo.
+    num11A = int(input("\ndigite um numero int: "))
+    num11B = int(input("\ndigite outro numero int: "))
+    num11C = float(input("\ndigite um numero float: "))
+    
+    print(num11A * 2 + num11B / 2)
+    print(num11A * 3 + num11C)
+    print(num11C ** 3)
 else:
     print("error")
 
