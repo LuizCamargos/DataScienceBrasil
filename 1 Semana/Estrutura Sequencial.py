@@ -1,4 +1,4 @@
-from math import pi
+from math import pi,ceil
 import time
 
 entrada = int(input("digite um numero da lista de exercicios: "))
@@ -124,18 +124,33 @@ elif entrada == 16:
     # Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total.
     areaQuadrada16 = float(input("\ndigite a area quadrada: "))
     tinta16 = areaQuadrada16 / 3
-    latasTinta16 = round(tinta16, 0) 
+    latasTinta16 = round(tinta16 + 0.5, 0) 
     custo16 = latasTinta16 * 80
     print("\nLatas necessarias: {0}, Custo: R${1}".format(latasTinta16, custo16))
 elif entrada == 17:
-    
+    #Faça um Programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. Considere que a cobertura da tinta é de 1 litro para cada 6 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00 ou em galões de 3,6 litros, que custam R$ 25,00.
+    #Informe ao usuário as quantidades de tinta a serem compradas e os respectivos preços em 3 situações:
+    # A) comprar apenas latas de 18 litros;
+    # B) comprar apenas galões de 3,6 litros;
+    # C) misturar latas e galões, de forma que o preço seja o menor. Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, considere latas cheias.
+    areaQuadrada17 = float(input("\ntamanho da area m²: "))
+    litros17 = areaQuadrada17 / 6 
+    latasTinta17 = round((litros17 / 18)+0.5 , 0)
+    valorLatas17 = latasTinta17 * 80.0
+    galoesTinta17 = round((litros17 / 3.6 )+0.5, 0)
+    valorGaloes17 = galoesTinta17 * 25.0
+    sobra17 = round(((litros17 % 18)/3.6) + 0.5, 0)
+    valorMisto = sobra17 * 25.0 + valorLatas17
+    print("latas de 18 litros: R$" + str(valorLatas17))
+    print("galões de 3,6 litros: R$" + str(valorGaloes17))
+    print("misto + 10%: R$"+str(valorMisto))
 elif entrada == 18:
     #Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de um link de Internet (em Mbps),
     # calcule e informe o tempo aproximado de download do arquivo usando este link (em minutos).
-    tamanho17 = float(input("\ndigite o tamanho do arquivo em MB: "))
-    velocidade17 = float(input("\ndigite a velocidade da coneccao em Mbps: "))
-    tempo17 = (tamanho17 / velocidade17)
-    print("ETA: "+str(tempo17)+" min")
+    tamanho18 = float(input("\ndigite o tamanho do arquivo em MB: "))
+    velocidade18 = float(input("\ndigite a velocidade da coneccao em Mbps: "))
+    tempo18 = (tamanho18 / velocidade18)
+    print("ETA: "+str(tempo18)+" min")
 else:
     print("error")
 
