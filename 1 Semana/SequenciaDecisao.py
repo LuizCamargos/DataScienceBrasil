@@ -26,3 +26,10 @@ elif entrada == 3:
         print("sexo invalido!")
 elif entrada == 4:
     #4 Faça um Programa que verifique se uma letra digitada é vogal ou consoante.
+    vogais4 = "AEIOU"
+    letra4 = input("\ndigite uma letra: ")
+    letra4 = letra4.upper()
+    if letra4 in vogais4:
+        print("e Vogal")
+    else:
+        print("nao e volgal")
