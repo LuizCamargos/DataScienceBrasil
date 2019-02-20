@@ -33,3 +33,20 @@ elif entrada == 4:
         print("e Vogal")
     else:
         print("nao e volgal")
+elif entrada == 5:
+    #5 Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar: 
+        #A mensagem "Aprovado", se a média alcançada for maior ou igual a sete; 
+        #A mensagem "Reprovado", se a média for menor do que sete; 
+        #A mensagem "Aprovado com Distinção", se a média for igual a dez. 
+    Nota = [0, 0, 0]
+    Nota.insert(0, int(input("\ndigite a primeira nota: ")))
+    Nota.insert(1, int(input("\ndigite a segunda nota: ")))
+    Nota.insert(2, (Nota[0]+Nota[1])/ 2)
+    if Nota[2] == 10:
+        print("Aprovado com Distincao")
+    elif Nota[2] >= 7:
+        print("Aprovado")
+    else:
+        print("Reprovado")
+    print(Nota[2])
+    
