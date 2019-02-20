@@ -63,3 +63,29 @@ elif entrada == 6:
     else:
         MaiorNumero6 = Num6[2]
     print("O maior numero e: "+str(MaiorNumero6))
+elif entrada == 7:
+    #7 Faça um Programa que leia três números e mostre o maior e o menor deles. 
+    Num7 = [0, 0, 0]
+    Num7[0] = float(input("\ndigite um numero: "))
+    Num7[1] = float(input("\ndigite outro numero: "))
+    Num7[2] = float(input("\ndigite mais um numero: "))
+    if Num7[0] > Num7[1] and Num7[0] > Num7[2]:
+        MaiorNumero7 = Num7[0]
+        if Num7[1] < Num7[2]:
+            MenorNumero7 = Num7[1]
+        else:
+            MenorNumero7 = Num7[2]
+    elif Num7[1] > Num7[0] and Num7[1] > Num7[2]:
+        MaiorNumero7 = Num7[1]
+        if Num7[2] < Num7[0]:
+            MenorNumero7 = Num7[2]
+        else:
+            MenorNumero7 = Num7[0]
+    else:
+        MaiorNumero7 = Num7[2]
+        if Num7[1] < Num7[0]:
+            MenorNumero7 = Num7[1]
+        else:
+            MenorNumero7 = Num7[0]
+    print("O maior numero e: "+str(MaiorNumero7))
+    print("O menor numero e: "+str(MenorNumero7))
