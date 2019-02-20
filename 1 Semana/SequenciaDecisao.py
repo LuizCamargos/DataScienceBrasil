@@ -38,15 +38,28 @@ elif entrada == 5:
         #A mensagem "Aprovado", se a média alcançada for maior ou igual a sete; 
         #A mensagem "Reprovado", se a média for menor do que sete; 
         #A mensagem "Aprovado com Distinção", se a média for igual a dez. 
-    Nota = [0, 0, 0]
-    Nota.insert(0, int(input("\ndigite a primeira nota: ")))
-    Nota.insert(1, int(input("\ndigite a segunda nota: ")))
-    Nota.insert(2, (Nota[0]+Nota[1])/ 2)
-    if Nota[2] == 10:
+    Nota5 = [0, 0, 0]
+    Nota5.insert(0, int(input("\ndigite a primeira nota: ")))
+    Nota5.insert(1, int(input("\ndigite a segunda nota: ")))
+    Nota5.insert(2, (Nota5[0]+Nota5[1])/ 2)
+    if Nota5[2] == 10:
         print("Aprovado com Distincao")
-    elif Nota[2] >= 7:
+    elif Nota5[2] >= 7:
         print("Aprovado")
     else:
         print("Reprovado")
-    print(Nota[2])
-    
+    print(Nota5[2])
+
+elif entrada == 6:
+    #6 Faça um Programa que leia três números e mostre o maior deles. 
+    Num6 = [0, 0, 0]
+    Num6[0] = float(input("\ndigite um numero: "))
+    Num6[1] = float(input("\ndigite outro numero: "))
+    Num6[2] = float(input("\ndigite mais um numero: "))
+    if Num6[0] > Num6[1] and Num6[0] > Num6[2]:
+        MaiorNumero6 = Num6[0]
+    elif Num6[1] > Num6[0] and Num6[1] > Num6[2]:
+        MaiorNumero6 = Num6[1]
+    else:
+        MaiorNumero6 = Num6[2]
+    print("O maior numero e: "+str(MaiorNumero6))
