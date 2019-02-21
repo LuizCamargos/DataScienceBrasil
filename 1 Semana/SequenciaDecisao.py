@@ -66,3 +66,14 @@ elif entrada == 7:
     ListaOrdenada7 = sorted(ListaNum7)
     print("O maior numero e: "+str(ListaOrdenada7[2]))
     print("O menor numero e: "+str(ListaOrdenada7[0]))
+elif entrada == 8:
+    #8 Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato. 
+    ProdutoA8 = float(input("\ndigite o preco do produto A: "))
+    ProdutoB8 = float(input("\ndigite o preco do produto B: "))
+    ProdutoC8 = float(input("\ndigite o preco do produto C: "))
+    if ProdutoA8 < ProdutoB8 and ProdutoA8 < ProdutoC8:
+        print("\nProduto A vale mais a pena")
+    elif ProdutoB8 < ProdutoA8 and ProdutoB8 < ProdutoC8:
+        print("\nProduto B vale mais a pena")
+    else:
+        print("\nProduto C vale mais a pena")
