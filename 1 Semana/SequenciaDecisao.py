@@ -85,3 +85,14 @@ elif entrada == 9:
         ListaNum9.append(num9)
     ListaOrdenada9 = sorted(ListaNum9, reverse = True)
     print(ListaOrdenada9)
+elif entrada == 10:
+    #10 Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
+    horario10 = input("\ndigite M-matutino ou V-Vespertino ou N- Noturno: ")
+    if horario10 == "M":
+        print("\nBom dia!")
+    elif horario10 == "V":
+        print("\nBoa tarde!")
+    elif horario10 == "N":
+        print("\nBoa Noite!")
+    else:
+        print("Valor Invalido!")
