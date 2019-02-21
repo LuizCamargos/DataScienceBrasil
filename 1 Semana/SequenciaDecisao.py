@@ -38,54 +38,31 @@ elif entrada == 5:
         #A mensagem "Aprovado", se a média alcançada for maior ou igual a sete; 
         #A mensagem "Reprovado", se a média for menor do que sete; 
         #A mensagem "Aprovado com Distinção", se a média for igual a dez. 
-    Nota5 = [0, 0, 0]
-    Nota5.insert(0, int(input("\ndigite a primeira nota: ")))
-    Nota5.insert(1, int(input("\ndigite a segunda nota: ")))
-    Nota5.insert(2, (Nota5[0]+Nota5[1])/ 2)
-    if Nota5[2] == 10:
+    ac = 0
+    for i in range(0, 2):
+        ac += float(input("\ndigite uma nota: "))
+    ac/=2
+    if ac == 10:
         print("Aprovado com Distincao")
-    elif Nota5[2] >= 7:
+    elif ac >= 7:
         print("Aprovado")
     else:
         print("Reprovado")
-    print(Nota5[2])
-
+    print(ac)
 elif entrada == 6:
     #6 Faça um Programa que leia três números e mostre o maior deles. 
-    Num6 = [0, 0, 0]
-    Num6[0] = float(input("\ndigite um numero: "))
-    Num6[1] = float(input("\ndigite outro numero: "))
-    Num6[2] = float(input("\ndigite mais um numero: "))
-    if Num6[0] > Num6[1] and Num6[0] > Num6[2]:
-        MaiorNumero6 = Num6[0]
-    elif Num6[1] > Num6[0] and Num6[1] > Num6[2]:
-        MaiorNumero6 = Num6[1]
-    else:
-        MaiorNumero6 = Num6[2]
-    print("O maior numero e: "+str(MaiorNumero6))
+    ListaNum6 = []
+    for i in range(0, 3):
+        num6 = float(input("Digite um numero: "))
+        ListaNum6.append(num6)
+    ListaOrdenada6 = sorted(ListaNum6)
+    print("O maior numero e: "+str(ListaOrdenada6[2]))
 elif entrada == 7:
     #7 Faça um Programa que leia três números e mostre o maior e o menor deles. 
-    Num7 = [0, 0, 0]
-    Num7[0] = float(input("\ndigite um numero: "))
-    Num7[1] = float(input("\ndigite outro numero: "))
-    Num7[2] = float(input("\ndigite mais um numero: "))
-    if Num7[0] > Num7[1] and Num7[0] > Num7[2]:
-        MaiorNumero7 = Num7[0]
-        if Num7[1] < Num7[2]:
-            MenorNumero7 = Num7[1]
-        else:
-            MenorNumero7 = Num7[2]
-    elif Num7[1] > Num7[0] and Num7[1] > Num7[2]:
-        MaiorNumero7 = Num7[1]
-        if Num7[2] < Num7[0]:
-            MenorNumero7 = Num7[2]
-        else:
-            MenorNumero7 = Num7[0]
-    else:
-        MaiorNumero7 = Num7[2]
-        if Num7[1] < Num7[0]:
-            MenorNumero7 = Num7[1]
-        else:
-            MenorNumero7 = Num7[0]
-    print("O maior numero e: "+str(MaiorNumero7))
-    print("O menor numero e: "+str(MenorNumero7))
+    ListaNum7 = []
+    for i in range(0, 3):
+        num7 = float(input("Digite um numero: "))
+        ListaNum7.append(num7)
+    ListaOrdenada7 = sorted(ListaNum7)
+    print("O maior numero e: "+str(ListaOrdenada7[2]))
+    print("O menor numero e: "+str(ListaOrdenada7[0]))
