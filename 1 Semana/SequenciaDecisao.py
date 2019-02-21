@@ -77,3 +77,11 @@ elif entrada == 8:
         print("\nProduto B vale mais a pena")
     else:
         print("\nProduto C vale mais a pena")
+elif entrada == 9:
+    #9 Faça um Programa que leia três números e mostre-os em ordem decrescente.
+    ListaNum9 = []
+    for i in range(0, 3):
+        num9 = float(input("Digite um numero: "))
+        ListaNum9.append(num9)
+    ListaOrdenada9 = sorted(ListaNum9, reverse = True)
+    print(ListaOrdenada9)
