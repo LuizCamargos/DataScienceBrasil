@@ -96,3 +96,29 @@ elif entrada == 10:
         print("\nBoa Noite!")
     else:
         print("Valor Invalido!")
+elif entrada == 11:
+    #Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:
+    #salários até R$ 280,00 (incluindo) : aumento de 20%
+    #salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
+    #salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
+    #salários de R$ 1500,00 em diante : aumento de 5% Após o aumento ser realizado, informe na tela:
+    #o salário antes do reajuste;
+    #o percentual de aumento aplicado;
+    #o valor do aumento;
+    #o novo salário, após o aumento.
+    salario11 = float(input("\nDigite seu salario: "))
+    if salario11 <= 280.0:
+        taxa11 = salario11*0.2
+        porcentual11 = 20
+    elif salario11 <= 700.0:
+        taxa11 = salario11*0.15
+        porcentual11 = 15
+    elif salario11 <= 1500.0:
+        taxa11 = salario11*0.1
+        porcentual11 = 10
+    else:
+        taxa11 = salario11 * 0.05
+        porcentual11 = 5
+    total11 = salario11 + taxa11
+    print("salario R${0}, com ajuste : R${1}".format(salario11, total11))
+    print("porcentual aplicado: {0}%, valor porcentual: R${1}\n".format(porcentual11, taxa11))
