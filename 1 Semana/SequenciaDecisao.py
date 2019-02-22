@@ -153,26 +153,3 @@ elif entrada == 13:
         print(ListaDias13[diaDaSemana13])
     except :
         print("Valor invalido!")
-elif entrada == 14:
-    #14 Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo:
-    nota14 = 0
-    conceito14 = "E"
-    aprovados14 = ["A","B","C"]
-    for i in range(2):
-        nota14 += int(input("Digite uma nota: "))
-    nota14 /= 2
-
-    if nota14 > 9.0:
-        conceito14 = "A"
-    elif nota14 > 7.5:
-        conceito14 = "B"
-    elif nota14 > 6.0:
-        conceito14 = "C"
-    elif nota14 > 4.0:
-        conceito14 = "D"
-    
-    print("Nota: {0}, Conceito: {1}".format(nota14,conceito14))
-    if conceito14 in aprovados14:
-        print("Apovado")
-    else:
-        print("Reprovado")
