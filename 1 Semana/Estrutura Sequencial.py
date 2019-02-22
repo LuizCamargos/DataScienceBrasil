@@ -1,4 +1,4 @@
-from math import pi,ceil
+from math import pi
 import time
 
 entrada = int(input("digite um numero da lista de exercicios: "))
@@ -22,13 +22,13 @@ elif entrada == 3:
 elif entrada == 4:
     #4 Faça um Programa que peça as 4 notas bimestrais e mostre a média.
     nota4 = []
-    notaSoma4 =0 
+    notaSoma4 =0
     for i in range(1, 5):
         nota4.append(float(input("\n digite a nota {0}: ".format(i))))
         notaSoma4 += nota4[(i-1)]
     notaSoma4 /= 4
     print("\n nota final: {0}".format(notaSoma4))
-        
+
 elif entrada == 5:
     #5 Faça um Programa que converta metros para centímetros.
     m5 = float(input("\n conversor metros para centimetros: "))
@@ -52,7 +52,7 @@ elif entrada == 8:
     salario8 = float(input("\nsalario por hora: "))
     horas8 = float(input("\nhoras trabalhadas: "))
     print("\nsalario deste mes: {0}".format((salario8*horas8)))
-        
+
 elif entrada == 9:
     #9 Faça um Programa que peça a temperatura em graus Farenheit, transforme e mostre a temperatura em graus Celsius.
     farenheit9 = float(input("\ntemperatura em farenheit: "))
@@ -66,7 +66,7 @@ elif entrada == 10:
     print("\ntemperatura em farenheit: {0}".format(farenheit))
 elif entrada == 11:
     #11 Faça um Programa que peça 2 números inteiros e um número real. Calcule e mostre:
-    # A) o produto do dobro do primeiro com metade do segundo. 
+    # A) o produto do dobro do primeiro com metade do segundo.
     # B) a soma do triplo do primeiro com o terceiro.
     # C) o terceiro elevado ao cubo.
     num11A = int(input("\ndigite um numero int: "))
@@ -120,11 +120,11 @@ elif entrada == 15:
 
 elif entrada == 16:
     #16 Faça um programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada.
-    # Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00. 
+    # Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00.
     # Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total.
     areaQuadrada16 = float(input("\ndigite a area quadrada: "))
     tinta16 = areaQuadrada16 / 3
-    latasTinta16 = round(tinta16 + 0.5, 0) 
+    latasTinta16 = round(tinta16 + 0.5, 0)
     custo16 = latasTinta16 * 80
     print("\nLatas necessarias: {0}, Custo: R${1}".format(latasTinta16, custo16))
 elif entrada == 17:
@@ -134,7 +134,7 @@ elif entrada == 17:
     # B) comprar apenas galões de 3,6 litros;
     # C) misturar latas e galões, de forma que o preço seja o menor. Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, considere latas cheias.
     areaQuadrada17 = float(input("\ntamanho da area m²: "))
-    litros17 = areaQuadrada17 / 6 
+    litros17 = areaQuadrada17 / 6
     latasTinta17 = round((litros17 / 18)+0.5 , 0)
     valorLatas17 = latasTinta17 * 80.0
     galoesTinta17 = round((litros17 / 3.6 )+0.5, 0)

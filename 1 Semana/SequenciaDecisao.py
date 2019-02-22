@@ -123,11 +123,10 @@ elif entrada == 11:
     print("salario R${0}, com ajuste : R${1}".format(salario11, total11))
     print("porcentual aplicado: {0}%, valor porcentual: R${1}\n".format(porcentual11, taxa11))
 elif entrada == 12:
-    #Faça um programa para o cálculo de uma folha de pagamento
+    #12 Faça um programa para o cálculo de uma folha de pagamento
     salariohora12 = round(float(input("\nDigite seu salario/hora: ")), 2)
-    horastrabalhadas12 = rounf(float(input("\nDigite suas horas de trabalho do mes: ")), 2)
+    horastrabalhadas12 = round(float(input("\nDigite suas horas de trabalho do mes: ")), 2)
     salariobruto12 =  round(salariohora12 * horastrabalhadas12, 2)
-    sindicato12 = round(salariobruto12 * 0.03, 2)
     FGTS12 = round(salariobruto12 * 0.11, 2)
     INSS12 = round(salariobruto12 * 0.1, 2)
     if salariobruto12 <= 900.0:
@@ -139,10 +138,18 @@ elif entrada == 12:
     else:
         IR12 = 0.2
     IR12 = round(salariobruto12 * IR12, 2)
-    salarioLiq12 = salariobruto12 - (sindicato12 + IR12 + FGTS12)
+    salarioLiq12 = salariobruto12 - (IR12 + FGTS12)
     print("salario Bruto    :R$ "+str(salariobruto12))
     print("IR               :R$ "+str(IR12))
     print("INSS             :R$ "+str(INSS12))
     print("FGTS             :R$ "+str(FGTS12))
-    print("Total descontos  :R$ "+str(sindicato12 + IR12 + FGTS12))
+    print("Total descontos  :R$ "+str(salariobruto12 - salarioLiq12))
     print("Salario Liquido  :R$ "+str(salarioLiq12))
+elif entrada == 13:
+    #13 Faça um Programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.
+    diaDaSemana13 = int(input("Digite um dia dia semana (1-Domingo...):"))
+    ListaDias13 = ["Invalido","Domingo","Segunda","Terca","Quarta","Quinta","Sexta","Sabado"]
+    try:
+        print(ListaDias13[diaDaSemana13])
+    except :
+        print("Valor invalido!")
