@@ -34,10 +34,10 @@ elif entrada == 4:
     else:
         print("nao e volgal")
 elif entrada == 5:
-    #5 Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar: 
-        #A mensagem "Aprovado", se a média alcançada for maior ou igual a sete; 
-        #A mensagem "Reprovado", se a média for menor do que sete; 
-        #A mensagem "Aprovado com Distinção", se a média for igual a dez. 
+    #5 Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar:
+        #A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
+        #A mensagem "Reprovado", se a média for menor do que sete;
+        #A mensagem "Aprovado com Distinção", se a média for igual a dez.
     ac = 0
     for i in range(0, 2):
         ac += float(input("\ndigite uma nota: "))
@@ -50,7 +50,7 @@ elif entrada == 5:
         print("Reprovado")
     print(ac)
 elif entrada == 6:
-    #6 Faça um Programa que leia três números e mostre o maior deles. 
+    #6 Faça um Programa que leia três números e mostre o maior deles.
     ListaNum6 = []
     for i in range(0, 3):
         num6 = float(input("Digite um numero: "))
@@ -58,7 +58,7 @@ elif entrada == 6:
     ListaOrdenada6 = sorted(ListaNum6)
     print("O maior numero e: "+str(ListaOrdenada6[2]))
 elif entrada == 7:
-    #7 Faça um Programa que leia três números e mostre o maior e o menor deles. 
+    #7 Faça um Programa que leia três números e mostre o maior e o menor deles.
     ListaNum7 = []
     for i in range(0, 3):
         num7 = float(input("Digite um numero: "))
@@ -67,7 +67,7 @@ elif entrada == 7:
     print("O maior numero e: "+str(ListaOrdenada7[2]))
     print("O menor numero e: "+str(ListaOrdenada7[0]))
 elif entrada == 8:
-    #8 Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato. 
+    #8 Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.
     ProdutoA8 = float(input("\ndigite o preco do produto A: "))
     ProdutoB8 = float(input("\ndigite o preco do produto B: "))
     ProdutoC8 = float(input("\ndigite o preco do produto C: "))
@@ -122,3 +122,27 @@ elif entrada == 11:
     total11 = salario11 + taxa11
     print("salario R${0}, com ajuste : R${1}".format(salario11, total11))
     print("porcentual aplicado: {0}%, valor porcentual: R${1}\n".format(porcentual11, taxa11))
+elif entrada == 12:
+    #Faça um programa para o cálculo de uma folha de pagamento
+    salariohora12 = round(float(input("\nDigite seu salario/hora: ")), 2)
+    horastrabalhadas12 = rounf(float(input("\nDigite suas horas de trabalho do mes: ")), 2)
+    salariobruto12 =  round(salariohora12 * horastrabalhadas12, 2)
+    sindicato12 = round(salariobruto12 * 0.03, 2)
+    FGTS12 = round(salariobruto12 * 0.11, 2)
+    INSS12 = round(salariobruto12 * 0.1, 2)
+    if salariobruto12 <= 900.0:
+        IR12 = 0
+    elif salariobruto12 <= 1500.0:
+        IR12 = 0.05
+    elif salariobruto12 <= 2500:
+        IR12 = 0.12
+    else:
+        IR12 = 0.2
+    IR12 = round(salariobruto12 * IR12, 2)
+    salarioLiq12 = salariobruto12 - (sindicato12 + IR12 + FGTS12)
+    print("salario Bruto    :R$ "+str(salariobruto12))
+    print("IR               :R$ "+str(IR12))
+    print("INSS             :R$ "+str(INSS12))
+    print("FGTS             :R$ "+str(FGTS12))
+    print("Total descontos  :R$ "+str(sindicato12 + IR12 + FGTS12))
+    print("Salario Liquido  :R$ "+str(salarioLiq12))
