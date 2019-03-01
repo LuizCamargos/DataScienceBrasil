@@ -1,3 +1,4 @@
+import math
 entrada = int(input("Digite o numero da questao: "))
 
 if entrada == 1:
@@ -178,7 +179,7 @@ elif entrada == 14:
         print("Reprovado")
 elif entrada == 15:
     #15 Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.  
-    lados15 = (input("Digite os tres lados do triangulo(dando espaco): ").split(" "))
+    lados15 = input("Digite os tres lados do triangulo(dando espaco): ").split(" ")
     ladoA15 = lados15.count(lados15[0])
     ladoB15 = lados15.count(lados15[1])
 
@@ -191,3 +192,17 @@ elif entrada == 15:
     else:
         print("digite corretamente")
     print(ladoA15, ladoB15)
+
+elif entrada == 16:
+    #16 Faça um programa que calcule as raízes de uma equação do segundo grau
+    a16, b16, c16 = list(map(int, input("Digite os valores A, B e C(dando espaco): ").split(" ")))
+    delta16 = b16**2 -4 *a16 *c16
+    if delta16 < 0:
+        print("Delta negativo")
+    elif delta16 == 0:
+        print("delta = 0")
+    else:
+        Xa16 = (-b16 + math.sqrt(delta16))/ (2 * a16)
+        Xb16 = (-b16 - math.sqrt(delta16))/ (2 * a16)
+        print("Equacao de 2 grau: ",Xa16, "\t", Xb16)
+    print(delta16)
