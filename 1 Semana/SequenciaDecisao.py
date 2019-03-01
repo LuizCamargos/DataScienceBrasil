@@ -206,3 +206,20 @@ elif entrada == 16:
         Xb16 = (-b16 - math.sqrt(delta16))/ (2 * a16)
         print("Equacao de 2 grau: ",Xa16, "\t", Xb16)
     print(delta16)
+
+elif entrada == 17:
+    #17 Faça um Programa que peça um número correspondente a um determinado ano e em seguida informe se este ano é ou não bissexto.
+    ano17 = int(input("Digite um ano para saber se e ou nao bissexto: "))
+    if ano17 % 4 == 0:
+        if ano17 % 100 != 0:
+            print("Ano bissexto!")
+        elif ano17 % 100 == 0:
+            if ano17 % 400 == 0:
+                print("Ano bissexto!")
+            else:
+                print("Nao e ano bissexto")
+        else:
+                print("Nao e ano bissexto")
+    else:
+                print("Nao e ano bissexto")
+
