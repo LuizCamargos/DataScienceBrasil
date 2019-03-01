@@ -176,3 +176,18 @@ elif entrada == 14:
         print("Apovado")
     else:
         print("Reprovado")
+elif entrada == 15:
+    #15 Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.  
+    lados15 = (input("Digite os tres lados do triangulo(dando espaco): ").split(" "))
+    ladoA15 = lados15.count(lados15[0])
+    ladoB15 = lados15.count(lados15[1])
+
+    if ladoA15 == 3:
+        print("Triangulo Equilatero")
+    elif ladoA15 and ladoB15 == 1:
+        print("Triangulo Escaleno")
+    elif ladoA15 or ladoB15 == 2:
+        print("Triangulo Isosceles")
+    else:
+        print("digite corretamente")
+    print(ladoA15, ladoB15)
