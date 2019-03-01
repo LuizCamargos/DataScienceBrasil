@@ -210,16 +210,38 @@ elif entrada == 16:
 elif entrada == 17:
     #17 Faça um Programa que peça um número correspondente a um determinado ano e em seguida informe se este ano é ou não bissexto.
     ano17 = int(input("Digite um ano para saber se e ou nao bissexto: "))
+    anobissexto17 = False
     if ano17 % 4 == 0:
         if ano17 % 100 != 0:
-            print("Ano bissexto!")
+            anobissexto17 = True
         elif ano17 % 100 == 0:
             if ano17 % 400 == 0:
-                print("Ano bissexto!")
-            else:
-                print("Nao e ano bissexto")
-        else:
-                print("Nao e ano bissexto")
-    else:
-                print("Nao e ano bissexto")
+                anobissexto17 = True
 
+    if anobissexto17 == True:
+        print("Ano bissexto!")
+    else:
+        print("Nao e ano bissexto")
+
+elif entrada == 18:
+    #18 Faça um Programa que peça uma data no formato dd/mm/aaaa e determine se a mesma é uma data válida.
+    dd18, mm18, aaaa18 = list(map(int , (input("Digite uma data no formato dd/mm/aaaa: ").split("/"))))
+    listaMeses31dias18 = [1,3,5,7,8,10,12]
+    anobissexto18 = False
+    valido = True
+
+    if aaaa18 % 4 == 0:
+        if aaaa18 % 100 != 0:
+            anobissexto18 = True
+        elif aaaa18 % 100 == 0:
+            if aaaa18 % 400 == 0:
+                anobissexto18 = True
+
+    if dd18 > 31 or dd18 < 1 or mm18 < 1 or mm18 > 12 or aaaa18 < 1:
+        valido = False
+    if dd18 != 31 and mm18 not in listaMeses31dias18:
+        valido = False
+    if anobissexto18 == True and mm18 == 2 and dd18 < 30 :
+        valido = True
+
+    print(valido)
