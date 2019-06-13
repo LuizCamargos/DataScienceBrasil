@@ -145,7 +145,7 @@ elif entrada == 17:
     print("galões de 3,6 litros: R$" + str(valorGaloes17))
     print("misto + 10%: R$"+str(valorMisto))
 elif entrada == 18:
-    #Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de um link de Internet (em Mbps),
+    #18 Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de um link de Internet (em Mbps),
     # calcule e informe o tempo aproximado de download do arquivo usando este link (em minutos).
     tamanho18 = float(input("\ndigite o tamanho do arquivo em MB: "))
     velocidade18 = float(input("\ndigite a velocidade da coneccao em Mbps: "))
